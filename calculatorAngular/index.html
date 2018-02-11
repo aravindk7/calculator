@@ -38,9 +38,9 @@
                         <label for="code">Input Operation [+ - * / ]</label>
                         <input class="form-control" name="operation"
                             ng-model="operation" type="text"  
-                            ng-pattern="/^[+-*/]$/"
+                            ng-pattern="/^[\+\-\*\/]$/"
                             ng-change="calculate(operation, operand1, operand2)">
-                        <div ng-show="calcForm.operand1.$error.pattern" class="alert alert-danger">
+                        <div ng-show="calcForm.operation.$error.pattern" class="alert alert-danger">
                                 Please enter a valid Operator! 
                         </div>
                     </div>

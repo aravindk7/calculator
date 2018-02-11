@@ -54,21 +54,3 @@ app.service('Calculator', function () {
     };
 
 });
-
-app.directive('validOperator', function () {
-    return {
-        restrict: 'A',
-        require: 'ngModel',
-        link: function (scope, element, attributes, ngModel) {
-
-            function validateNumber(value) {
-                var validity = !isNaN(value);
-                ngModel.$setValidity('number', validity)
-                return value;
-            }
-
-            ngModel.$parsers.push(validateNumber);
-            ngModel.$formatters.push(validateNumber);
-        }
-    }
-});
