@@ -56,12 +56,8 @@ public class CalculatorDisplay {
 			System.out.println(output);
 			System.out.println();
 		} catch (RuntimeException e) {
-			e.printStackTrace();
-			try {
-				Thread.sleep(100L);
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
-			}
+			System.out.println(e.getMessage());
+			System.out.println();
 			displaywarning();
 		}
 
